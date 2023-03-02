@@ -10,3 +10,5 @@ metadata:
   name: autorepair-sample
 spec:
   # TODO(user): Add fields here
+  enable_service: true
+  enable_ingress: true
