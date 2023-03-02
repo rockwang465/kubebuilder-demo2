@@ -1,0 +1,27 @@
+# permissions for end users to view autorepairs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: autorepair-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubebuilder-demo2
+    app.kubernetes.io/part-of: kubebuilder-demo2
+    app.kubernetes.io/managed-by: kustomize
+  name: autorepair-viewer-role
+rules:
+- apiGroups:
+  - test.example.com
+  resources:
+  - autorepairs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - test.example.com
+  resources:
+  - autorepairs/status
+  verbs:
+  - get

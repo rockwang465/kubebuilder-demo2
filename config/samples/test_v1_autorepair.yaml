@@ -1,0 +1,12 @@
+apiVersion: test.example.com/v1
+kind: Autorepair
+metadata:
+  labels:
+    app.kubernetes.io/name: autorepair
+    app.kubernetes.io/instance: autorepair-sample
+    app.kubernetes.io/part-of: kubebuilder-demo2
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kubebuilder-demo2
+  name: autorepair-sample
+spec:
+  # TODO(user): Add fields here
